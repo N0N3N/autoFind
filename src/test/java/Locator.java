@@ -10,7 +10,7 @@ public class Locator {
 
         core.openWebPage("https://rus.delfi.lv");
 
-        
+
         core.closeWebPage();
 
     }

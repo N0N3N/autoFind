@@ -1,6 +1,8 @@
 package core;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class CoreFunc {
@@ -20,4 +22,11 @@ public class CoreFunc {
     public void closeWebPage() {
         driver.close();
     }
+
+    public WebElement findElement(By value){
+
+        return driver.findElement(value);
+
+    }
+
 }
