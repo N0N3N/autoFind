@@ -28,5 +28,6 @@ public class CoreFunc {
         return driver.findElement(value);
 
     }
-
+    public void clickElement(By value) {driver.findElement(value).click();}
+    
 }

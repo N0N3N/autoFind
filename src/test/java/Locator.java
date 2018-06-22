@@ -13,7 +13,9 @@ public class Locator {
 
         core.findElement(By.xpath("//img[@alt='DELFI']"));
 
-        core.closeWebPage();
+        core.clickElement(By.xpath("//img[@alt='DELFI']"));
+
+        // core.closeWebPage();
 
     }
 
