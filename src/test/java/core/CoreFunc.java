@@ -29,5 +29,12 @@ public class CoreFunc {
 
     }
     public void clickElement(By value) {driver.findElement(value).click();}
-    
+
+    public void sendKeys(By value, By text) {
+        driver.findElement(value).sendKeys(text);
+
+        //driver.findElement(By.name("phone")).sendKeys("(222)222-2222");
+        //driver.findElement(By.id("ssn")).sendKeys("555-55-5555");
+    }
+
 }
