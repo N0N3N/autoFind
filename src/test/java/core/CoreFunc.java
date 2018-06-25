@@ -30,7 +30,7 @@ public class CoreFunc {
     }
     public void clickElement(By value) {driver.findElement(value).click();}
 
-    public void sendKeys(By value, By text) {
+    public void sendKeys(By value, String text) {
         driver.findElement(value).sendKeys(text);
 
         //driver.findElement(By.name("phone")).sendKeys("(222)222-2222");

@@ -12,6 +12,6 @@ public class Experiment {
         core.openWebPage("https://google.com");
         core.clickElement(By.xpath("//*[@id=\"SIvCob\"]/a[3]"));
         core.clickElement(By.xpath("//*[@id=\"sfdiv\"]"));
-        core.sendKeys(By.xpath("//*[@id=\"sfdiv\"]"),"555");
+        core.sendKeys(By.xpath("//*[@id=\"lst-ib\"]"),"555");
     }
 }
