@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.List;
+
 public class CoreFunc {
 
     private WebDriver driver;
@@ -24,7 +26,6 @@ public class CoreFunc {
     }
 
     public WebElement findElement(By value){
-
         return driver.findElement(value);
 
     }
@@ -32,9 +33,29 @@ public class CoreFunc {
 
     public void sendKeys(By value, String text) {
         driver.findElement(value).sendKeys(text);
-
-        //driver.findElement(By.name("phone")).sendKeys("(222)222-2222");
-        //driver.findElement(By.id("ssn")).sendKeys("555-55-5555");
     }
+
+    public void list(By value){
+        List<WebElement> elements = driver.findElements(value);
+        System.out.println("Number of found elements = "+ elements.size());
+
+        for(WebElement ele : elements){
+            System.out.println(ele.getText());
+        }
+
+    }
+    public void checkList(By value, String text){
+        List<WebElement> elements = driver.findElements(value);
+        System.out.println("Number of found elements = "+ elements.size());
+
+        for(WebElement ele : elements){
+            if (ele.getText().contains(text)){
+                System.out.println("Found: "+ ele.getText());
+            }
+
+        }
+
+    }
+
 
 }

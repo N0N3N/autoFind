@@ -9,9 +9,15 @@ public class Experiment {
     @Test
     public void unoExp() {
 
-        core.openWebPage("https://google.com");
-        core.clickElement(By.xpath("//*[@id=\"SIvCob\"]/a[3]"));
-        core.clickElement(By.xpath("//*[@id=\"sfdiv\"]"));
-        core.sendKeys(By.xpath("//*[@id=\"lst-ib\"]"),"555");
+        core.openWebPage("http://rus.delfi.lv/");
+        //core.list(By.xpath("//*[@class='top2012-title']"));
+        core.checkList(By.xpath("//*[@class='top2012-title']"), "В Каунасе рабочие нашли");
+
+
+        // core.clickElement(By.xpath("//*[contains(text(`Кандидат  bbbbb   Согласия на пост президента Петерис Спрогис`))]"));
+        // core.clickElement(By.xpath("//*[@id=\"sfdiv\"]"));
+        // core.sendKeys(By.xpath("//*[@id=\"lst-ib\"]"),"555");
+
+
     }
 }
